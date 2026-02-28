@@ -44,7 +44,13 @@ dependencies {
 
     implementation(project(":domain"))
 
-    //GSON & Coroutines
-    implementation(libs.gson)
-    implementation(libs.kotlinx.coroutines.android)
+    //Room DB
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
+
+    //Retrofit & okhttp
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+    implementation(libs.okhttp.logging)
 }
