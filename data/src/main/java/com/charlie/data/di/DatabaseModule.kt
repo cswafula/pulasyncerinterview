@@ -25,4 +25,22 @@ object DatabaseModule {
             "pula_survey.db"
         ).build()
     }
+
+    @Provides
+    fun provideFarmerDao(db: AppDatabase) = db.farmerDao()
+
+    @Provides
+    fun provideSurveyTemplateDao(db: AppDatabase) = db.surveyTemplateDao()
+
+    @Provides
+    fun provideSurveyResponseDao(db: AppDatabase) = db.surveyResponseDao()
+
+    @Provides
+    fun provideSurveyAnswerDao(db: AppDatabase) = db.surveyAnswerDao()
+
+    @Provides
+    fun provideSurveyAnswerSectionDao(db: AppDatabase) = db.surveyAnswerSectionDao()
+
+    @Provides
+    fun provideAttachmentDao(db: AppDatabase) = db.attachmentDao()
 }
