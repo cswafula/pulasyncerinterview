@@ -1,4 +1,4 @@
-package com.charlie.data.model
+package com.charlie.data.local.entity
 
 enum class SyncStatus {
     PENDING, SYNCING, SYNCED, FAILED

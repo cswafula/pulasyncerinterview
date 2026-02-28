@@ -53,4 +53,8 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.retrofit.gson)
     implementation(libs.okhttp.logging)
+
+    //Hilt DI
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
 }

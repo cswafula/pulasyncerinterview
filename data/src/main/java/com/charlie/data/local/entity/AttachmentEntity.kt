@@ -1,4 +1,4 @@
-package com.charlie.data.model
+package com.charlie.data.local.entity
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
