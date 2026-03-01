@@ -1,7 +1,7 @@
 package com.charlie.data.local.converter
 
 import androidx.room.TypeConverter
-import com.charlie.data.local.entity.SyncStatus
+import com.charlie.domain.model.SyncStatus
 
 class SyncStatusConverter {
 
