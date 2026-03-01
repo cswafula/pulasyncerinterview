@@ -4,10 +4,12 @@ import com.charlie.data.local.entity.AttachmentEntity
 import com.charlie.data.local.entity.SurveyAnswerEntity
 import com.charlie.data.local.entity.SurveyAnswerSectionEntity
 import com.charlie.data.local.entity.SurveyResponseEntity
+import com.charlie.data.local.entity.SurveyTemplateEntity
 import com.charlie.domain.model.Attachment
 import com.charlie.domain.model.SurveyAnswer
 import com.charlie.domain.model.SurveyAnswerSection
 import com.charlie.domain.model.SurveyResponse
+import com.charlie.domain.model.SurveyTemplate
 import com.charlie.domain.model.SyncStatus
 
 fun SurveyResponse.toEntity() = SurveyResponseEntity(
@@ -73,4 +75,18 @@ fun AttachmentEntity.toDomain() = Attachment(
     localUri = localUri,
     mimeType = mimeType,
     isSynced = isSynced
+)
+
+fun SurveyTemplate.toEntity() = SurveyTemplateEntity(
+    remoteId = remoteId,
+    title = title,
+    version = version,
+    questionsJson = questionsJson
+)
+
+fun SurveyTemplateEntity.toDomain() = SurveyTemplate(
+    remoteId = remoteId,
+    title = title,
+    version = version,
+    questionsJson = questionsJson
 )
