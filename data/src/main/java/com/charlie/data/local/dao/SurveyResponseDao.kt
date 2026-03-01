@@ -38,7 +38,4 @@ interface SurveyResponseDao {
     @Query("UPDATE survey_responses SET status = 'PENDING' WHERE status = 'SYNCING'")
     suspend fun resetIncompleteSyncingResponses()
 
-    @Query("UPDATE survey_responses SET status = 'PENDING' WHERE status = 'SYNCING' AND id IN (:responseIds)")
-    suspend fun resetIncompleteSyncingResponsesByIds(responseIds: List<Int>)
-
 }

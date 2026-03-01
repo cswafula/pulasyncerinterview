@@ -73,13 +73,4 @@ dependencies {
     implementation(libs.work.runtime.ktx)
     implementation(libs.hilt.work)
     ksp(libs.hilt.work.compiler)
-
-    //Tests & Mockk
-    testImplementation(libs.junit)
-    testImplementation(libs.mockk)
-    testImplementation(libs.kotlinx.coroutines.test)
-    testImplementation(libs.room.testing)
-    testImplementation(libs.turbine)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 }
