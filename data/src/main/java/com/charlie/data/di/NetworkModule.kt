@@ -1,6 +1,7 @@
 package com.charlie.data.di
 
 import com.charlie.data.api.SurveyApiService
+import com.charlie.data.remote.mock.MockSurveyApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -51,7 +52,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideSurveyApiService(retrofit: Retrofit): SurveyApiService {
-        return retrofit.create(SurveyApiService::class.java)
+    fun provideSurveyApiService(): SurveyApiService {
+        return MockSurveyApiService()
     }
 }

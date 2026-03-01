@@ -1,6 +1,7 @@
 package com.charlie.data.remote.model
 
 data class SurveyResponseUploadResult(
-    val responseCode: Int,
+    val responseId: Int,
+    val success: Boolean,
     val responseMessage: String
 )
