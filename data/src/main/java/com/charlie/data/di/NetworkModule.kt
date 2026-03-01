@@ -18,7 +18,7 @@ import javax.inject.Singleton
 object NetworkModule {
 
     /**
-     * Connection & Read timeouts to support the 2G/3G connnections.
+     * Connection & Read timeouts to support the 2G/3G connections.
      * */
     private const val CONNECT_TIMEOUT_SECONDS = 30L
     private const val READ_TIMEOUT_SECONDS = 30L

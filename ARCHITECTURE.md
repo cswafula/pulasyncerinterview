@@ -1,4 +1,4 @@
-# Architecture Documentation — Pula Survey Sync Engine
+# Architecture Documentation Pula Survey Sync Engine
 
 ## 1. Architectural Design
 
