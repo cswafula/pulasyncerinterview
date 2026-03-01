@@ -7,14 +7,14 @@ The sync engine follows a **layered clean architecture** with three distinct lay
 - **Domain**. Holds the business models, repository interfaces, error contracts.
 - **Data**. Holds Room entities, DAOs, repository implementations, remote DTOs, and the
   sync engine itself. Depends inward on domain interfaces.
-- **App** — Hilt DI wiring only. Nothing here.
+- **App**. Hilt DI wiring only. Nothing here.
 
 Dependency injection is handled by **Hilt** to keep construction logic out of business
 logic and to make every component independently testable. Async operations use
-**Kotlin Coroutines** throughout — `suspend` functions for one-shot operations, a
+**Kotlin Coroutines** throughout `suspend` functions for one-shot operations, a
 `Mutex` for concurrency control.
 
-## 2. Media File Uploads — Photo Compression Strategy (Not Implemented)
+## 2. Media File Uploads | Photo Compression Strategy (Not Implemented)
 
 Photo compression must happen **before** the upload payload is assembled, not inside
 the sync engine loop. The reason is separation of concerns; I think the sync engine should
@@ -59,7 +59,7 @@ agent and stop accepting new photo attachments entirely.
 
 ----
 
-## 4. Remote Troubleshooting — Custom Request Tagging Feature
+## 4. Remote Troubleshooting | Custom Request Tagging Feature
 
 If a field agent's sync is failing and the support team cannot physically access the
 device, the following data would be sufficient to diagnose most issues:
@@ -70,7 +70,7 @@ This works on the assumtion there is an existing escallation matrix used by the 
 
 - Sync session start/end timestamps
 - Number of pending responses at session start
-- Per-response outcome — responseId, each state machine status transition, error code (e.g. `UPLD_400`)
+- Per-response outcome: responseId, each state machine status transition, error code (e.g. `UPLD_400`)
 - Device Android API level and available RAM at session start
 
 **Request Tagging:**
@@ -81,7 +81,7 @@ This works on the assumtion there is an existing escallation matrix used by the 
 
 ----
 
-## 5. GPS Field Boundary Capture — Anticipated Challenges
+## 5. GPS Field Boundary Capture | Anticipated Challenges
 
 I would anticipate the following challenges are anticipated:
 
